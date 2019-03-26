@@ -1,0 +1,14 @@
+nilaiakumulasi1 <-function(num,k,i,t){
+  #num adalah pilihan (1=bunga tunggal 2= bunga majemuk)
+  # k = modal
+  # i = bunga (desimal)
+  # t = waktu
+  switch(num,
+         satu={
+           At=k*(1+i*t)
+         },
+         dua={
+           At=k*(1+i)^t
+         })
+  return(At)
+}
