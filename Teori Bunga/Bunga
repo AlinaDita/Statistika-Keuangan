@@ -1,0 +1,20 @@
+bunga <- function(num,At,k,t, m = TRUE){
+#num = pilihan, 1: bunga tunggal, 2: bunga majemuk biasa ,3: bunga majemuk kontinu 
+#At= nilai akumulasi 
+#k = modal 
+#t = waktu
+  switch(num,
+         satu ={
+           bunga= (At/k-1)/t
+           cat ("Nilai Bunga Tunggal :", bunga)
+         },
+         dua ={
+           bunga= m*((At/k)^(1/(m*t))-1)
+           cat ("Nilai Bunga Majemuk Biasa/Nominal :", bunga)
+         },
+         tiga ={
+           bunga = log(At/k)/t
+           cat ("Nilai Bunga Majemuk Kontinu :", bunga)
+           }
+  )
+}
